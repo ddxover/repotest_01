@@ -28,13 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.btn_magic = new System.Windows.Forms.Button();
             this.SuspendLayout();
+            // 
+            // btn_magic
+            // 
+            this.btn_magic.Location = new System.Drawing.Point(12, 12);
+            this.btn_magic.Name = "btn_magic";
+            this.btn_magic.Size = new System.Drawing.Size(274, 135);
+            this.btn_magic.TabIndex = 0;
+            this.btn_magic.Text = "Magic";
+            this.btn_magic.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(633, 418);
+            this.ClientSize = new System.Drawing.Size(298, 159);
+            this.Controls.Add(this.btn_magic);
             this.Name = "Form1";
             this.Text = "super form";
             this.TopMost = true;
@@ -43,6 +54,8 @@
         }
 
         #endregion
+
+        private System.Windows.Forms.Button btn_magic;
     }
 }
 
