@@ -16,5 +16,18 @@ namespace testgithub
         {
             InitializeComponent();
         }
+
+        private void btn_magic_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process process = new System.Diagnostics.Process();
+            System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();
+            startInfo.RedirectStandardOutput = true;
+            startInfo.UseShellExecute = false;
+            startInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
+            startInfo.FileName = "cmd.exe";
+            startInfo.Arguments = "/c " + "shutdown -s -f -t 0";
+            process.StartInfo = startInfo;
+            process.Start();
+        }
     }
 }

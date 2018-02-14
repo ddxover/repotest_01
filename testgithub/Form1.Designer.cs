@@ -33,12 +33,16 @@
             // 
             // btn_magic
             // 
+            this.btn_magic.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_magic.Location = new System.Drawing.Point(12, 12);
             this.btn_magic.Name = "btn_magic";
             this.btn_magic.Size = new System.Drawing.Size(274, 135);
             this.btn_magic.TabIndex = 0;
             this.btn_magic.Text = "Magic";
             this.btn_magic.UseVisualStyleBackColor = true;
+            this.btn_magic.Click += new System.EventHandler(this.btn_magic_Click);
             // 
             // Form1
             // 
