@@ -19,6 +19,21 @@ namespace testgithub
 
         private void btn_magic_Click(object sender, EventArgs e)
         {
+            Random rnd = new Random();
+            int RedColor = rnd.Next(0, 256);
+            int GreenColor = rnd.Next(0, 256);
+            int BlueColor = rnd.Next(0, 256);
+
+            btn_magic.BackColor = Color.FromArgb(RedColor, GreenColor, BlueColor);
+
+            if (BlueColor == 255 & GreenColor == 255 & BlueColor == 255)
+            {
+                shutdown();
+            }
+        }
+
+        private void shutdown()
+        {
             System.Diagnostics.Process process = new System.Diagnostics.Process();
             System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();
             startInfo.RedirectStandardOutput = true;
@@ -29,5 +44,6 @@ namespace testgithub
             process.StartInfo = startInfo;
             process.Start();
         }
+
     }
 }
